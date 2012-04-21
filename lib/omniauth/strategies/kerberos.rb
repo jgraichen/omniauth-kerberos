@@ -15,7 +15,7 @@ module OmniAuth
 
       info do
         { username: username,
-          email: username + "@" + @krb5.get_default_realm }
+          email: username + "@" + @krb5.get_default_realm.downcase }
       end
 
       def authenticate(username, password)
