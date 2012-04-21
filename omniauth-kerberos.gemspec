@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "omniauth-kerberos"
   gem.require_paths = ["lib"]
-  gem.version       = "0.1.0"
+  gem.version       = "0.2.0"
 
   gem.add_dependency "timfel-krb5-auth", "~> 0.8"
   gem.add_dependency "omniauth-multipassword"
