@@ -2,7 +2,7 @@
 
 **omniauth-kerberos** is a simple [OmniAuth](https://github.com/intridea/omniauth)
 strategy to authenticate using a Kerberos server. **omniauth-kerberos** can be used as
-a authenticator for [OmniAuth MultiPassword](https://github.com/jgraichen/omniauth-multipassword).
+an authenticator for [OmniAuth MultiPassword](https://github.com/jgraichen/omniauth-multipassword).
 
 
 ## Installation
