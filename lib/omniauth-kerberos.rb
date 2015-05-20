@@ -1,1 +1,1 @@
-require "omniauth/strategies/kerberos"
+require 'omniauth/strategies/kerberos'

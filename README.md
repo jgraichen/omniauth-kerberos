@@ -1,8 +1,10 @@
 # Omniauth::Strategies::Kerberos
 
-**omniauth-kerberos** is a simple [OmniAuth](https://github.com/intridea/omniauth)
-strategy to authenticate using a Kerberos server. **omniauth-kerberos** can be used as
-an authenticator for [OmniAuth MultiPassword](https://github.com/jgraichen/omniauth-multipassword).
+[![Build Status](https://travis-ci.org/jgraichen/omniauth-kerberos.svg)](https://travis-ci.org/jgraichen/omniauth-kerberos)
+[![Code Climate](https://codeclimate.com/github/jgraichen/omniauth-kerberos/badges/gpa.svg)](https://codeclimate.com/github/jgraichen/omniauth-kerberos)
+[![Test Coverage](https://codeclimate.com/github/jgraichen/omniauth-kerberos/badges/coverage.svg)](https://codeclimate.com/github/jgraichen/omniauth-kerberos/coverage)
+
+**omniauth-kerberos** is a simple [OmniAuth](https://github.com/intridea/omniauth) strategy to authenticate using a Kerberos server. **omniauth-kerberos** can be used as an authenticator for [OmniAuth MultiPassword](https://github.com/jgraichen/omniauth-multipassword).
 
 
 ## Installation
@@ -36,9 +38,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-You still need to configure your system for Kerberos usage like
-specifying realms. If you has your own login form you can specify
-the fields to use:
+You still need to configure your system for Kerberos usage like specifying realms. If you has your own login form you can specify the fields to use:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do

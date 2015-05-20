@@ -1,6 +1,6 @@
-require "omniauth"
-require "krb5_auth"
-require "omniauth/multipassword/base"
+require 'omniauth'
+require 'krb5_auth'
+require 'omniauth/multipassword/base'
 
 module OmniAuth
   module Strategies
@@ -15,7 +15,7 @@ module OmniAuth
 
       info do
         { username: username,
-          email: username + "@" + @krb5.get_default_realm.downcase }
+          email: username + '@' + @krb5.get_default_realm.downcase }
       end
 
       def authenticate(username, password)
