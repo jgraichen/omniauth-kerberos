@@ -2,10 +2,11 @@ sudo: false
 language: ruby
 cache: bundler
 rvm:
-- '2.1'
-- '2.0'
-- 1.9.3
-- rbx-2
+- '2.4.0'
+- '2.3.3'
+- '2.2.6'
+- '2.1.10'
+- 'rbx-3.72'
 env:
   global:
     secure: GFgbyRIlAc93IyH5clByNGS9iI/5OSaa2Ba0iGemyLR93I80qxIUNgMvXzp74YTTbGTrWyz9JPBSD14uO/3tuPYhXuawbDT0k1D/97Xm7wMhxLXZNSEATKt71g3bk/106fy+ULz6aqzQWnLkGHsvfg3vlkdyn8rX/X1HstajrcI=
