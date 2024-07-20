@@ -1,12 +1,16 @@
 require 'rspec'
 
-if ENV['CI'] || (defined?(:RUBY_ENGINE) && RUBY_ENGINE != 'rbx')
-  begin
-    require 'simplecov'
-    SimpleCov.start
-  rescue LoadError
-  end
+require 'simplecov'
+require 'simplecov-cobertura'
+
+SimpleCov.start do
+  add_filter 'spec'
 end
+
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::CoberturaFormatter,
+]
 
 require 'omniauth-kerberos'
 

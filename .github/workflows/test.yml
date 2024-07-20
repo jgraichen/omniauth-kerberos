@@ -1,0 +1,43 @@
+---
+name: test
+on: push
+jobs:
+  rspec:
+    name: "ruby-${{ matrix.ruby }}"
+    runs-on: ubuntu-22.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby:
+          - "3.3"
+          - "3.2"
+          - "3.1"
+          - "3.0"
+          - "2.7"
+
+    env:
+      BUNDLE_WITHOUT: development
+
+    steps:
+      - uses: actions/checkout@master
+
+      - run: |
+          sudo apt-get update --quiet
+          sudo apt-get install --quiet --yes libkrb5-dev
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+        env:
+          BUNDLE_JOBS: 4
+          BUNDLE_RETRY: 3
+
+      - run: |
+          bundle exec rspec --color --format documentation
+
+      - uses: codecov/codecov-action@v4
+        with:
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
