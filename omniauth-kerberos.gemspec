@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gem|
-  gem.version       = '0.3.0'
+  gem.version       = '0.4.0'
   gem.name          = 'omniauth-kerberos'
   gem.authors       = ['Jan Graichen']
   gem.email         = ['jan.graichen@altimos.de']
